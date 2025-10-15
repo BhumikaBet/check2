@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="stdboard.css">
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="https://ui-avatars.com/api/?name=John+Student&background=random" alt="Student" class="profile-img">
+            <h2 class="profile-name">John Student</h2>
+            <p class="profile-role">Computer Science</p>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="stdboard.html" class="nav-link">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="goal.html" class="nav-link">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Goals</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-comments"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="report.html" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="section active">
+            <div class="section-header">
+                <h1 class="section-title">Feedbacks</h1>
+                <p class="section-subtitle">Instructor comments and performance evaluations</p>
+            </div>
+
+            <!-- Feedback Cards Container -->
+            <div class="feedback-container">
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Aman+Sharma&background=4e54c8&color=fff&size=60" alt="Mentor Aman" class="mentor-avatar">
+                        <h4 class="mentor-name">Aman Sharma</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-positive">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>Positive</span>
+                        </div>
+                        <p class="feedback-description">
+                            Excellent work on your recent project! Your attention to detail and creative approach really stood out. Keep up the great work and continue to challenge yourself with more complex problems.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 15, 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Neha+Patel&background=f59e0b&color=fff&size=60" alt="Mentor Neha" class="mentor-avatar">
+                        <h4 class="mentor-name">Neha Patel</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-improvement">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Need Improvement</span>
+                        </div>
+                        <p class="feedback-description">
+                            Your understanding of the concepts is good, but you need to work on time management. Try to complete assignments before the deadline and focus more on practical implementation.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 12, 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Ravi+Kumar&background=10b981&color=fff&size=60" alt="Mentor Ravi" class="mentor-avatar">
+                        <h4 class="mentor-name">Ravi Kumar</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-neutral">
+                            <i class="fas fa-minus"></i>
+                            <span>Neutral</span>
+                        </div>
+                        <p class="feedback-description">
+                            You're making steady progress in your coursework. Consider participating more in class discussions and group projects to enhance your learning experience.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 10, 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Pooja+Singh&background=ef4444&color=fff&size=60" alt="Mentor Pooja" class="mentor-avatar">
+                        <h4 class="mentor-name">Pooja Singh</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-positive">
+                            <i class="fas fa-star"></i>
+                            <span>Positive</span>
+                        </div>
+                        <p class="feedback-description">
+                            Outstanding performance in your recent presentation! Your communication skills and subject knowledge were impressive. You're definitely on the right track.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 8, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="feedback.js"></script>
+</body>
+</html>
