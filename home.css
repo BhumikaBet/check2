@@ -1,0 +1,187 @@
+:root {
+  --primary-blue-purple: #4e54c8;
+  --secondary-light-blue: #8f94fb;
+  --background: #f5f7fb;
+  --text: #333;
+  --white: #ffffff;
+  --green: #10b981;
+  --red: #ef4444;
+  --orange: #f59e0b;
+  --gray-light: #e2e8f0;
+  --gray-medium: #718096;
+  --gray-dark: #cbd5e0;
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  background-color: var(--background) !important;
+  color: var(--text) !important;
+}
+
+.hero-background {
+  background: linear-gradient(135deg, #4e54c8, #565cce);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+.card {
+  background-color: var(--white) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.2s !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  border: 1px solid var(--gray-light) !important;
+}
+
+.card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Additional styles for buttons and other elements */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-blue-purple), var(--secondary-light-blue)) !important;
+  color: var(--white) !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px 2px rgba(86, 92, 206, 0.5) !important;
+}
+
+.btn-secondary {
+  background-color: var(--white) !important;
+  border: 1px solid #565cce !important;
+  color: var(--text) !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 4px 12px 2px rgba(86, 92, 206, 0.5) !important;
+}
+
+.icon-green {
+  background-color: var(--green) !important;
+  color: var(--white) !important;
+}
+
+.icon-red {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+}
+
+.icon-orange {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
+
+.icon-blue {
+  background-color: var(--primary-blue-purple) !important;
+  color: var(--white) !important;
+}
+
+/* Glow effect for navbar */
+header.bg-white.shadow-sm.py-4 {
+  box-shadow: 0 0 10px 2px rgba(86, 92, 206, 0.3), 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-5px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+
+.student-part {
+  display: inline-block;
+  transform: translateX(-100%);
+  animation: slideInLeft 1s forwards;
+}
+
+.tracker-part {
+  display: inline-block;
+  transform: translateX(100%);
+  animation: slideInRight 1s forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+  }
+}
