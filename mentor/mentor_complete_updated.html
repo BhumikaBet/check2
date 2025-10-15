@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mentor.css">
+
+</head>
+<body>
+    <!-- Left Panel -->
+    <div class="left-panel">
+        <div class="mentor-profile">
+            <img src="https://ui-avatars.com/api/?name=John+Doe&background=4e54c8&color=fff&size=80" alt="Profile" class="profile-img">
+            <h3 class="profile-name">John Doe</h3>
+            <p class="profile-role">Senior Mentor</p>
+        </div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="students.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Students</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="mentor-reports.html" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Reports</span>
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+        <div class="top-bar">
+            <h1 class="welcome-text">Welcome back, John!</h1>
+            <button class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </button>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboard" class="section active">
+
+            <div class="snapshot-container">
+                <div class="snapshot-card">
+                    <div class="snapshot-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="snapshot-info">
+                        <div class="snapshot-value" id="totalStudents">12</div>
+                        <div class="snapshot-label">Total Students</div>
+                    </div>
+                </div>
+
+                <div class="snapshot-card">
+                    <div class="snapshot-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="snapshot-info">
+                        <div class="snapshot-value" id="goalsCompleted">28</div>
+                        <div class="snapshot-label">Goals Completed</div>
+                    </div>
+                </div>
+
+                <div class="snapshot-card">
+                    <div class="snapshot-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="snapshot-info">
+                        <div class="snapshot-value" id="PENDINGFeedback">5</div>
+                        <div class="snapshot-label">PENDING Feedback</div>
+                    </div>
+                </div>
+
+                <div class="snapshot-card">
+                    <div class="snapshot-icon" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="snapshot-info">
+                        <div class="snapshot-value" id="avgProgress">73%</div>
+                        <div class="snapshot-label">Avg Progress</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-container">
+                <h3 class="activity-title">Recent Activity-future scope</h3>
+                <ul class="activity-list" id="activityList">
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-description">You reviewed Sarah's latest assignment</h4>
+                            <p class="activity-time">2 minutes ago</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-description">You provided feedback on John's project</h4>
+                            <p class="activity-time">15 minutes ago</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-description">You updated Michelle's learning goals</h4>
+                            <p class="activity-time">1 hour ago</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-description">You approved Alex's course completion</h4>
+                            <p class="activity-time">2 hours ago</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Students Section -->
+        <div id="students" class="section">
+        </div>
+
+        <!-- Settings Section -->
+        <div id="settings" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Settings</h2>
+                <p class="section-subtitle">Manage your account and preferences</p>
+            </div>
+
+            <div class="placeholder-container">
+                <div class="placeholder-content">
+                    <i class="fas fa-cog"></i>
+                    <h3>Settings</h3>
+                    <p>Account settings and preferences will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="mentor.js"></script>
+    <script src="students.js"></script>
+
+
+</body>
+</html>

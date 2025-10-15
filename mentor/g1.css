@@ -1,0 +1,120 @@
+/* Modal overlay */
+#g1Modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* dimmed background */
+  font-family: 'Inter', sans-serif;
+}
+
+/* Show modal */
+#g1Modal.show {
+  display: block;
+}
+
+/* Modal content container */
+.g1-modal-content {
+  background-color: #FFFFFF;
+  margin: 5% auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 600px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal header */
+.g1-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Modal title */
+.g1-modal-title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  margin: 0;
+}
+
+/* Close button */
+.g1-close-btn {
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  color: #000000;
+  transition: color 0.2s ease;
+}
+
+.g1-close-btn:hover {
+  color: #555555;
+}
+
+/* Filter tabs container */
+.g1-filter-tabs {
+  display: none; /* Hide tabs container since only one tab remains */
+}
+
+/* Individual tab button */
+.g1-tab {
+  display: none; /* Hide individual tabs */
+}
+
+/* Active tab style */
+.g1-tab.active {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+/* Goals list container */
+.g1-goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Individual goal card */
+.g1-goal-card {
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  padding: 16px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Highlighted goal card */
+.g1-goal-card.highlighted {
+  background-color: #FFF8E1;
+}
+
+/* Goal title */
+.g1-goal-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin: 0 0 6px 0;
+  color: #000000;
+}
+
+/* Goal due date */
+.g1-goal-due-date {
+  font-size: 14px;
+  color: #757575;
+  margin: 0;
+}
