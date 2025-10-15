@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="stdsec.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="window.location.href='admin.html'">
+                <i class="fas fa-arrow-left"></i>
+                Back to Admin Dashboard
+            </button>
+            <h1 class="page-title">Student Section</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="table-section">
+            <div class="section-header">
+                <h2 class="section-title">Student Management</h2>
+                <div class="filter-container">
+                    <label for="classFilter">Filter by Class:</label>
+                    <select id="classFilter" class="filter-dropdown">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                    <button id="updateButton" class="update-button">Update</button>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Class</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <!-- Student data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm Update</h3>
+            <p class="modal-message">Are you sure you want to update the student classes?</p>
+            <div class="modal-buttons">
+                <button id="confirmYes" class="btn-yes">Yes</button>
+                <button id="confirmNo" class="btn-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="stdsec.js"></script>
+</body>
+</html>

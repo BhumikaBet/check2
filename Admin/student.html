@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="https://ui-avatars.com/api/?name=John+Student&background=random" alt="Student" class="profile-img">
+            <h2 class="profile-name">John Student</h2>
+            <p class="profile-role">Computer Science</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#goals" class="nav-link" data-section="goals">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Goals</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#feedback" class="nav-link" data-section="feedback">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="section-header">
+                <h1 class="section-title">Student Dashboard</h1>
+                <p class="section-subtitle">Welcome back, John! Here's your academic overview.</p>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(79, 70, 229, 0.1); color: #4f46e5;">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">3/5</div>
+                        <div class="stat-label">Goals Completed</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">7</div>
+                        <div class="stat-label">PENDING Assignments</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Completed Courses</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-value">4</div>
+                        <div class="stat-label">Upcoming Deadlines</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-header">
+                    <h3 class="progress-title">Overall Progress</h3>
+                    <span>60%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%;"></div>
+                </div>
+                <div class="progress-info">
+                    <span>Started: Sep 1, 2023</span>
+                    <span>Target: Jun 15, 2024</span>
+                </div>
+            </div>
+            
+            <div class="activity-container">
+                <h3 class="progress-title">Recent Activity</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-icon" style="color: #4f46e5;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">Completed assignment: Calculus Homework</h4>
+                            <p class="activity-time">Today, 2:30 PM</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="color: #10b981;">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">Achieved goal: Complete Python course</h4>
+                            <p class="activity-time">Yesterday, 5:45 PM</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="color: #f59e0b;">
+                            <i class="fas fa-comment"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">Received feedback on Essay Assignment</h4>
+                            <p class="activity-time">October 12, 2023</p>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="color: #ef4444;">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="activity-content">
+                            <h4 class="activity-title">New assignment: Physics Project</h4>
+                            <p class="activity-time">October 10, 2023</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Goals Section -->
+        <section id="goals" class="section">
+            <div class="section-header">
+                <h1 class="section-title">Academic Goals</h1>
+                <p class="section-subtitle">Track and manage your learning objectives</p>
+            </div>
+
+            <!-- Goal Summary -->
+            <div class="goals-summary">
+                <div class="circular-progress">
+                    <svg class="progress-circle" width="120" height="120">
+                        <circle cx="60" cy="60" r="50" stroke="#e2e8f0" stroke-width="8" fill="none"></circle>
+                        <circle cx="60" cy="60" r="50" stroke="#4e54c8" stroke-width="8" fill="none"
+                                stroke-dasharray="314" stroke-dashoffset="314" class="progress-bar-circle"></circle>
+                    </svg>
+                    <div class="progress-text">
+                        <span class="progress-number">2</span>
+                        <span class="progress-total">/6</span>
+                        <div class="progress-label">Goals Completed</div>
+                    </div>
+                </div>
+                <button class="add-goal-btn" id="addGoalBtn">
+                    <i class="fas fa-plus"></i>
+                    Add Goal
+                </button>
+            </div>
+
+            <!-- Goals List -->
+            <div class="goals-list" id="goalsList">
+                <!-- Sample Goals -->
+                <div class="goal-card mentor-goal">
+                    <div class="goal-header">
+                        <h3 class="goal-title">Complete Advanced Calculus Course</h3>
+                        <span class="mentor-tag">Assigned by Dr. Smith</span>
+                    </div>
+                    <div class="goal-content">
+                        <p class="goal-description">Master integration techniques and differential equations for advanced problem solving.</p>
+                        <div class="goal-meta">
+                            <span class="goal-due-date">Due: Dec 15, 2023</span>
+                        </div>
+                    </div>
+                    <div class="goal-footer">
+                        <div class="goal-status">
+                            <span class="status-indicator status-incomplete"></span>
+                            <span class="status-text">Incomplete</span>
+                        </div>
+                        <div class="goal-actions">
+                            <button class="action-btn preview-btn" data-goal-id="1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn edit-btn" data-goal-id="1">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <h3 class="goal-title">Finish Math Assignment</h3>
+                    </div>
+                    <div class="goal-content">
+                        <p class="goal-description">Complete all problems in Chapter 7 exercises.</p>
+                        <div class="goal-meta">
+                            <span class="goal-due-date">Due: Oct 25, 2023</span>
+                        </div>
+                    </div>
+                    <div class="goal-footer">
+                        <div class="goal-status">
+                            <span class="status-indicator status-complete"></span>
+                            <span class="status-text">Complete</span>
+                        </div>
+                        <div class="goal-actions">
+                            <button class="action-btn preview-btn" data-goal-id="2">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn edit-btn" data-goal-id="2">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn delete-btn" data-goal-id="2">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goal-card">
+                    <div class="goal-header">
+                        <h3 class="goal-title">Practice Python Programming</h3>
+                    </div>
+                    <div class="goal-content">
+                        <p class="goal-description">Complete 50 coding exercises on data structures and algorithms.</p>
+                        <div class="goal-meta">
+                            <span class="goal-due-date">Due: Nov 10, 2023</span>
+                        </div>
+                    </div>
+                    <div class="goal-footer">
+                        <div class="goal-status">
+                            <span class="status-indicator status-in-progress"></span>
+                            <span class="status-text">In Progress</span>
+                        </div>
+                        <div class="goal-actions">
+                            <button class="action-btn preview-btn" data-goal-id="3">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="action-btn edit-btn" data-goal-id="3">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="action-btn delete-btn" data-goal-id="3">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Feedback Section -->
+        <section id="feedback" class="section">
+            <div class="section-header">
+                <h1 class="section-title">Feedbacks</h1>
+                <p class="section-subtitle">Instructor comments and performance evaluations</p>
+            </div>
+
+            <!-- Feedback Cards Container -->
+            <div class="feedback-container">
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Aman+Sharma&background=4e54c8&color=fff&size=60" alt="Mentor Aman" class="mentor-avatar">
+                        <h4 class="mentor-name">Aman Sharma</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-positive">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>Positive</span>
+                        </div>
+                        <p class="feedback-description">
+                            Excellent work on your recent project! Your attention to detail and creative approach really stood out. Keep up the great work and continue to challenge yourself with more complex problems.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 15, 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Neha+Patel&background=f59e0b&color=fff&size=60" alt="Mentor Neha" class="mentor-avatar">
+                        <h4 class="mentor-name">Neha Patel</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-improvement">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Need Improvement</span>
+                        </div>
+                        <p class="feedback-description">
+                            Your understanding of the concepts is good, but you need to work on time management. Try to complete assignments before the deadline and focus more on practical implementation.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 12, 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Ravi+Kumar&background=10b981&color=fff&size=60" alt="Mentor Ravi" class="mentor-avatar">
+                        <h4 class="mentor-name">Ravi Kumar</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-neutral">
+                            <i class="fas fa-minus"></i>
+                            <span>Neutral</span>
+                        </div>
+                        <p class="feedback-description">
+                            You're making steady progress in your coursework. Consider participating more in class discussions and group projects to enhance your learning experience.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 10, 2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-card">
+                    <div class="mentor-profile">
+                        <img src="https://ui-avatars.com/api/?name=Pooja+Singh&background=ef4444&color=fff&size=60" alt="Mentor Pooja" class="mentor-avatar">
+                        <h4 class="mentor-name">Pooja Singh</h4>
+                    </div>
+                    <div class="feedback-content">
+                        <div class="feedback-status status-positive">
+                            <i class="fas fa-star"></i>
+                            <span>Positive</span>
+                        </div>
+                        <p class="feedback-description">
+                            Outstanding performance in your recent presentation! Your communication skills and subject knowledge were impressive. You're definitely on the right track.
+                        </p>
+                        <div class="feedback-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>October 8, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

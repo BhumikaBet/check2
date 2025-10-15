@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vi iewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <!-- Left Panel (Navigation) -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="https://ui-avatars.com/api/?name=Admin+User&background=4e54c8&color=fff" alt="Admin" class="profile-img">
+            <h2 class="profile-name">Admin User</h2>
+            <p class="profile-role">Administrator</p>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#approval" class="nav-link" data-section="approval">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Approval Section</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="mentor.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Mentor Section</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="stdsec.html" class="nav-link">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Student Section</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Right Panel (Content Area) -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-right">
+                <a href="../home.html" class="logout-btn">Logout</a>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+
+
+            <!-- Main Content -->
+            <div class="main-content-area">
+                <!-- Welcome Block -->
+                <div class="welcome-block">
+                    <h2 class="welcome-text">Welcome back, Sarah 👋</h2>
+                    <p class="welcome-subtext">Here's a snapshot of your platform's activity.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(79, 70, 229, 0.1); color: #4f46e5;">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">1,250</div>
+                            <div class="stat-label">Total Students</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">350</div>
+                            <div class="stat-label">Total Mentors</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">15</div>
+                            <div class="stat-label">PENDING Registrations</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444;">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-value">220</div>
+                            <div class="stat-label">Active Users This Week</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for additional content -->
+                <div class="placeholder-content" style="display:none;">
+                    <p>Additional dashboard content can be added here as needed.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Assign Section -->
+        <section id="assign" class="section">
+            <div class="section-header">
+                <h1 class="section-title">Assign Section</h1>
+                <p class="section-subtitle">Manage assignments and tasks</p>
+            </div>
+            <div class="placeholder-text">
+                <i class="fas fa-tasks"></i>
+                <p>Assign Section content will be designed here.</p>
+            </div>
+        </section>
+        
+        <!-- Approval Section -->
+        <section id="approval" class="section">
+            <div class="section-header">
+                <h1 class="section-title">Approval Section</h1>
+                <p class="section-subtitle">Review and approve requests</p>
+            </div>
+            <div class="placeholder-text">
+                <i class="fas fa-check-circle"></i>
+                <p>Approval Section content will be designed here.</p>
+            </div>
+        </section>
+        
+        <!-- Mentor Section -->
+        <section id="mentor" class="section">
+            <div class="section-header">
+                <h1 class="section-title">Mentor Section</h1>
+                <p class="section-subtitle">Manage mentors and their activities</p>
+            </div>
+            <div class="placeholder-text">
+                <i class="fas fa-users"></i>
+                <p>Mentor Section content will be designed here.</p>
+            </div>
+        </section>
+        
+        <!-- Student Section -->
+        <section id="student" class="section">
+            <div class="section-header">
+                <h1 class="section-title">Student Section</h1>
+                <p class="section-subtitle">Manage students and their progress</p>
+            </div>
+            <div class="placeholder-text">
+                <i class="fas fa-graduation-cap"></i>
+                <p>Student Section content will be designed here.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

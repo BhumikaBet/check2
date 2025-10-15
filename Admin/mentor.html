@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="mentor.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="window.location.href='admin.html'">
+                <i class="fas fa-arrow-left"></i>
+                Back to Admin Dashboard
+            </button>
+            <h1 class="page-title">Mentor Section</h1>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="table-section">
+            <div class="section-header">
+                <h2 class="section-title">Mentor Management</h2>
+                <div class="filter-container">
+                    <label for="batchFilter">Filter by Batch:</label>
+                    <select id="batchFilter" class="filter-dropdown">
+                        <option value="all">All Batches</option>
+                        <option value="Class A">Class A</option>
+                        <option value="Class B">Class B</option>
+                        <option value="Class C">Class C</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Mentor Name</th>
+                            <th>Email ID</th>
+                            <th>Batches</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mentorTableBody">
+                        <!-- Mentor data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assign Modal -->
+    <div id="assignModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Assign Batch to Mentor</h3>
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="assignForm">
+                    <div class="form-group">
+                        <label for="mentorName">Mentor Name:</label>
+                        <input type="text" id="mentorName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="batchInput">Select Batches:</label>
+                        <select id="batchInput" multiple required style="min-height: 120px;">
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                        <small style="color: #666; font-size: 12px;">Hold Ctrl/Cmd to select multiple batches</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" onclick="closeModal()">Cancel</button>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unassign Modal -->
+    <div id="unassignModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Unassign Batch from Mentor</h3>
+                <span class="close-btn" onclick="closeUnassignModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="unassignForm">
+                    <div class="form-group">
+                        <label for="unassignMentorName">Mentor Name:</label>
+                        <input type="text" id="unassignMentorName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="unassignBatchInput">Select Batches to Unassign:</label>
+                        <select id="unassignBatchInput" multiple required style="min-height: 120px;">
+                            <!-- Options will be populated by JavaScript -->
+                        </select>
+                        <small style="color: #666; font-size: 12px;">Hold Ctrl/Cmd to select multiple batches</small>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" onclick="closeUnassignModal()">Cancel</button>
+                        <button type="submit" class="unassign-submit-btn">Unassign</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="mentor.js"></script>
+</body>
+</html>
